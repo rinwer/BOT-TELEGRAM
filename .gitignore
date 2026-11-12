@@ -1,0 +1,8 @@
+__pycache__/
+.env
+*.pyc
+*.pyo
+sessions_*.json
+sesiones.json
+sesiones_sitios.json
+visitas/

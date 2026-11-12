@@ -1,0 +1,4697 @@
+[
+  {
+    "nombre": "Posicionamiento",
+    "hijos": [
+      {
+        "nombre": "Tomar screenshot del celular",
+        "detalle": "Tomar screenshot del celular de las coordenadas GPS (Imagen 2)",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "SM",
+    "hijos": [
+      {
+        "nombre": "GSM",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "UMTS",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "LTE",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FLEXI",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "ULTRA",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "AIRSCALE",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "FCOB",
+    "hijos": [
+      {
+        "nombre": "GSM",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "UMTS",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "LTE",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FLEXI",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "ULTRA",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "AIRSCALE",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillas en el modulo",
+            "detalle": "Panoramica marquillas en el modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "detalle": "Panoramica Caja alarmas [Abierta + cerrada]",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del SM",
+            "detalle": "Panoramica general del SM donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "FPFH Piso",
+    "virtual": true,
+    "hijos": [
+      {
+        "nombre": "FPFH LOWER-1",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "OVPs Piso y bussbar",
+            "detalle": "OVPs Piso y bussbar al que estan aterrizados l",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FPFH LOWER-2",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "OVPs Piso y bussbar",
+            "detalle": "OVPs Piso y bussbar al que estan aterrizados l",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FPFH LOWER-3",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "OVPs Piso y bussbar",
+            "detalle": "OVPs Piso y bussbar al que estan aterrizados l",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Equipo TX",
+    "hijos": [
+      {
+        "nombre": "Panoramica de todos los radios",
+        "detalle": "Panoramica de todos los radios",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Fotos generales del cuarto de equipos",
+        "detalle": "Fotos generales del cuarto de equipos. Ingreso de cables etc.",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panoramica Gabinete abierto",
+        "detalle": "Panoramica Gabinete abierto",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panoramica Gabinete cerrado",
+        "detalle": "Panoramica Gabinete cerrado",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Busbar",
+        "detalle": "Busbar",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Foto etiquetas de los enlaces",
+        "detalle": "Foto etiquetas de los enlaces",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Toma de corrinete DC en cada uno",
+        "detalle": "Toma de corrinete DC en cada uno de los equipos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Referencia de los equipos",
+        "detalle": "Referencia de los equipos",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "Planta Electrica",
+    "hijos": [
+      {
+        "nombre": "Fotos generales de la planta desde varios",
+        "detalle": "Fotos generales de la planta desde varios angulos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Tablero de tranferencia",
+        "detalle": "Tablero de tranferencia.",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Tanques de combustible",
+        "detalle": "Tanques de combustible",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Etiqueta donde se evidencia la referencia",
+        "detalle": "Etiqueta donde se evidencia la referencia y capacidad de la planta",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "Equipo Fuerza",
+    "virtual": true,
+    "hijos": [
+      {
+        "nombre": "Equipo Fuerza-1",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica general abierto",
+            "detalle": "Panoramica general abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general cerrado",
+            "detalle": "Panoramica general cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Rectificadores y detalle",
+            "detalle": "Panoramica Rectificadores y detalle de rectificadores",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Baterias Y detalle de las baterias",
+            "detalle": "Panoramica Baterias Y detalle de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Etiqueta de baterias",
+            "detalle": "Etiqueta de baterias donde se identifica la capacidad de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (+)",
+            "detalle": "Barraje (+)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (-)",
+            "detalle": "Barraje (-)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Para FPMA mediar la salida del equipo",
+            "detalle": "Para FPMA mediar la salida del equipo con el multimetro. Por cada FPMA.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Breakers instalados",
+            "detalle": "Panoramica Breakers instalados.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Marquillas breakers",
+            "detalle": "Marquillas breakers",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medicion corriente por breakers DC",
+            "detalle": "Medicion corriente por breakers DC. Sin no esta disponible el consumo total en la pantalla de la controladora",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto consumo total corriente del equipo",
+            "detalle": "Foto consumo total corriente del equipo en display controlador",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar.",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "Eltek / ZTE / FPMA"
+      },
+      {
+        "nombre": "Equipo Fuerza-2",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica general abierto",
+            "detalle": "Panoramica general abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general cerrado",
+            "detalle": "Panoramica general cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Rectificadores y detalle",
+            "detalle": "Panoramica Rectificadores y detalle de rectificadores",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Baterias Y detalle de las baterias",
+            "detalle": "Panoramica Baterias Y detalle de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Etiqueta de baterias",
+            "detalle": "Etiqueta de baterias donde se identifica la capacidad de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (+)",
+            "detalle": "Barraje (+)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (-)",
+            "detalle": "Barraje (-)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Para FPMA mediar la salida del equipo",
+            "detalle": "Para FPMA mediar la salida del equipo con el multimetro. Por cada FPMA.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Breakers instalados",
+            "detalle": "Panoramica Breakers instalados.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Marquillas breakers",
+            "detalle": "Marquillas breakers",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medicion corriente por breakers DC",
+            "detalle": "Medicion corriente por breakers DC. Sin no esta disponible el consumo total en la pantalla de la controladora",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto consumo total corriente del equipo",
+            "detalle": "Foto consumo total corriente del equipo en display controlador",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar.",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "Eltek / ZTE / FPMA"
+      },
+      {
+        "nombre": "Equipo Fuerza-3",
+        "hijos": [
+          {
+            "nombre": "Listado de conexiones",
+            "detalle": "Envíe el listado de conexiones como mensaje de texto",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica general abierto",
+            "detalle": "Panoramica general abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general cerrado",
+            "detalle": "Panoramica general cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Rectificadores y detalle",
+            "detalle": "Panoramica Rectificadores y detalle de rectificadores",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Baterias Y detalle de las baterias",
+            "detalle": "Panoramica Baterias Y detalle de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Etiqueta de baterias",
+            "detalle": "Etiqueta de baterias donde se identifica la capacidad de las baterias",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (+)",
+            "detalle": "Barraje (+)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Barraje (-)",
+            "detalle": "Barraje (-)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Para FPMA mediar la salida del equipo",
+            "detalle": "Para FPMA mediar la salida del equipo con el multimetro. Por cada FPMA.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica Breakers instalados",
+            "detalle": "Panoramica Breakers instalados.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Marquillas breakers",
+            "detalle": "Marquillas breakers",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medicion corriente por breakers DC",
+            "detalle": "Medicion corriente por breakers DC. Sin no esta disponible el consumo total en la pantalla de la controladora",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto consumo total corriente del equipo",
+            "detalle": "Foto consumo total corriente del equipo en display controlador",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar.",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "Eltek / ZTE / FPMA"
+      }
+    ]
+  },
+  {
+    "nombre": "AC",
+    "hijos": [
+      {
+        "nombre": "TGD",
+        "hijos": [
+          {
+            "nombre": "Medicion voltaje",
+            "hijos": [
+              {
+                "nombre": "L1-N",
+                "detalle": "L1-N",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L2-N",
+                "detalle": "L2-N",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L3-N",
+                "detalle": "L3-N",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L1-L2",
+                "detalle": "L1-L2",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L1-L3",
+                "detalle": "L1-L3",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L2-L3",
+                "detalle": "L2-L3",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Medicion corriente",
+            "hijos": [
+              {
+                "nombre": "L1",
+                "detalle": "L1",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L2",
+                "detalle": "L2",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "L3",
+                "detalle": "L3",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Corriente Neutro",
+                "detalle": "Corriente Neutro",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Corriente tierra",
+                "detalle": "Corriente tierra",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Panormica tablero abierto",
+            "detalle": "Panormica tablero abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panormica tablero cerrado",
+            "detalle": "Panormica tablero cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Capacidad breakers",
+            "detalle": "Capacidad breakers",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Transformador y medidor",
+    "hijos": [
+      {
+        "nombre": "Acometida",
+        "hijos": [
+          {
+            "nombre": "Panoramicas generales y detalle del contador",
+            "detalle": "Panoramicas generales y detalle del contador",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidencia capacidad del totalizador",
+            "detalle": "Evidencia capacidad del totalizador",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica y detalle del transformador",
+            "detalle": "Panoramica y detalle del transformador",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "DC",
+    "hijos": [
+      {
+        "nombre": "Listado de conexiones",
+        "detalle": "Envíe el listado de conexiones como mensaje de texto",
+        "tipo": "lista"
+      },
+      {
+        "nombre": "Gabinete abierto",
+        "detalle": "Gabinete abierto",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Gabinete cerrado",
+        "detalle": "Gabinete cerrado",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Evidencia de todos los breakers",
+        "detalle": "Evidencia de todos los breakers o interruptores instalados en el tablero.",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Toma de corriente de DC del ramal A y Ramal B",
+        "detalle": "Toma de corriente de DC del ramal A y Ramal B.",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Toma de corriente en cada uno",
+        "detalle": "Toma de corriente en cada uno de los equipos de TX conectados en el PDB",
+        "tipo": "foto"
+      }
+    ],
+    "nota": "PDB"
+  },
+  {
+    "nombre": "Anillo Tierras y escalerillas",
+    "hijos": [
+      {
+        "nombre": "Foto por cada pata de la torre Recorrido",
+        "detalle": "Foto por cada pata de la torre Recorrido guayas",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Busbar en el sitio (BTS, Escalerillas, …)",
+        "detalle": "Busbar en el sitio (BTS, Escalerillas, …)",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Anillo de Tierras",
+        "detalle": "Anillo de Tierras",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Escalerillas de la estacion",
+        "detalle": "Escalerillas de la estacion",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "General piso y vista panoramica de piso a torre",
+    "hijos": [
+      {
+        "nombre": "Fotos generales de acceso",
+        "detalle": "Fotos generales de acceso",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panoramicas generales de la fachada",
+        "detalle": "Panoramicas generales de la fachada desde diferentes angulos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Fotos Generales desde cada esquina dentro",
+        "detalle": "Fotos Generales desde cada esquina dentro del sitio hacia los equipos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Fotos de Todas las Escalerillas en Sitio",
+        "detalle": "Fotos de Todas las Escalerillas en Sitio",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Arista de Torre de abajo hacia Arriba A",
+        "detalle": "Arista de Torre de abajo hacia Arriba A desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Arista de Torre de abajo hacia Arriba B",
+        "detalle": "Arista de Torre de abajo hacia Arriba B desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Arista de Torre de abajo hacia Arriba C",
+        "detalle": "Arista de Torre de abajo hacia Arriba C desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Arista de Torre de abajo hacia Arriba D",
+        "detalle": "Arista de Torre de abajo hacia Arriba D desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Cara de Torre A_B desde la calle",
+        "detalle": "Cara de Torre A_B desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Cara de Torre B_C desde la calle",
+        "detalle": "Cara de Torre B_C desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Cara de Torre C_A desde la calle",
+        "detalle": "Cara de Torre C_A desde la calle donde se vea la torre y sus equipos instalados",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Base de la Torre",
+        "detalle": "Base de la Torre",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panorámica Arista A + Ampliada Mitad Torre",
+        "detalle": "Panorámica Arista A + Ampliada Mitad Torre Hacia Arriba y Abajo",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panorámica Arista B + Ampliada Mitad Torre",
+        "detalle": "Panorámica Arista B + Ampliada Mitad Torre Hacia Arriba y Abajo",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Panorámica Arista C + Ampliada Mitad Torre",
+        "detalle": "Panorámica Arista C + Ampliada Mitad Torre Hacia Arriba y Abajo",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "Plano mano alzada piso",
+    "hijos": [
+      {
+        "nombre": "Plano tipo planta",
+        "detalle": "Plano tipo planta donde se consignen la distribucion de los equipos con sus respectivos nombres. Incluir distancias",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Escalerillas",
+        "detalle": "Escalerillas",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "SM",
+        "detalle": "SM",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "POWER",
+        "detalle": "POWER",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "TX",
+        "detalle": "TX",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Planta",
+        "detalle": "Planta",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Distancias de recorrido escalerillas",
+        "detalle": "Distancias de recorrido escalerillas horizontal + vertical.",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Distancias entre equipos",
+        "detalle": "Distancias entre equipos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Medidas del perimetro del sitio",
+        "detalle": "Medidas del perimetro del sitio",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Puertas de acceso",
+        "detalle": "Puertas de acceso",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Cuarto de equipos + su perimetro +",
+        "detalle": "Cuarto de equipos + su perimetro + distribucion en el interior",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Marcar en el plano los puntos cardianles",
+        "detalle": "Marcar en el plano los puntos cardianles. Norte-Sur",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Identificar los puntos cardinales",
+        "detalle": "Identificar los puntos cardinales en el plano (norte-sur-oriente-occidente)",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "RIESGOS",
+    "hijos": [
+      {
+        "nombre": "Foto de riesgo",
+        "detalle": "CADA VEZ QUE SE PRESENTA UN RIESO, SE DEBE INDICAR Y PONER L APALABRA RIESGO",
+        "tipo": "foto"
+      }
+    ],
+    "nota": "OXIDACION, ELECTRICO,RIESGO BIOLIGICO. ETC."
+  },
+  {
+    "nombre": "360",
+    "hijos": [
+      {
+        "nombre": "Toma de 36 fotos cada 10°",
+        "detalle": "Toma de 36 fotos cada 10°. Desde la parte superior de la estructura",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Video 360",
+        "detalle": "Video 360",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Vista Planta",
+        "hijos": [
+          {
+            "nombre": "Vista Planta: Panoramicas desde la parte",
+            "detalle": "Vista Planta: Panoramicas desde la parte superior de torre hacia abajo por cada arista. Debe visualizarse toda la estación en piso",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "RR ANTENA",
+    "virtual": true,
+    "hijos": [
+      {
+        "nombre": "RR ANTENA 1",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 2",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 3",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 4",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 5",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 6",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 7",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 8",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 9",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 10",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 11",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 12",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 13",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      },
+      {
+        "nombre": "RR ANTENA 14",
+        "hijos": [
+          {
+            "nombre": "Datos - sector, altura, y arista",
+            "detalle": "Escriba como texto: sector, altura, y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Foto donde se visualice el objetivo",
+            "detalle": "Foto donde se visualice el objetivo radiacion antena. Un 5% de cielo. Debe observarse parte una parte superior de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30",
+            "detalle": "+30",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30°",
+            "detalle": "-30°",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Vista panoramica de antena",
+            "detalle": "Vista panoramica de antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Evidenciar serial",
+            "detalle": "Evidenciar serial. Foto se debe tomar sea visible o no el serial",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura real de la antena",
+            "detalle": "Altura real de la antena. Tomada desde piso a mitad de la antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto donde se visualicen las marquillas +",
+            "detalle": "Foto donde se visualicen las marquillas + Objetivo radiacion",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TITLT MECANICO CON INCLINOMETRO",
+            "detalle": "TITLT MECANICO CON INCLINOMETRO",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "TILL ELECTRICO SI APLICA",
+            "detalle": "TILL ELECTRICO SI APLICA",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto recorrido Jumpers antena-RF",
+            "detalle": "Foto recorrido Jumpers antena-RF",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "ANTENA"
+      }
+    ]
+  },
+  {
+    "nombre": "RF",
+    "virtual": true,
+    "hijos": [
+      {
+        "nombre": "RF-1",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-2",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-3",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-4",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-5",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-6",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-7",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-8",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-9",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-10",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-11",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-12",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-13",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-14",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-15",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-16",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-17",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-18",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-19",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-20",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-21",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-22",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-23",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      },
+      {
+        "nombre": "RF-24",
+        "hijos": [
+          {
+            "nombre": "Datos - sector y arista",
+            "detalle": "Escriba como texto: sector y arista",
+            "tipo": "lista"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado (si aplica)",
+            "detalle": "Panoramica modulo cerrado (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo (si aplica)",
+            "detalle": "Panoramica marquillado del modulo (si aplica)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          }
+        ],
+        "nota": "GSM/UMTS-SRAN/LTE"
+      }
+    ]
+  },
+  {
+    "nombre": "MW",
+    "virtual": true,
+    "hijos": [
+      {
+        "nombre": "MW-1",
+        "hijos": [
+          {
+            "nombre": "Enlace 1",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 2",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 3",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 4",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 5",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 6",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 7",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 8",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 9",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 10",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 11",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          },
+          {
+            "nombre": "Enlace 12",
+            "hijos": [
+              {
+                "nombre": "Datos - altura y arista",
+                "detalle": "Escriba como texto: altura y arista",
+                "tipo": "lista"
+              },
+              {
+                "nombre": "Panoramica Antena completa desde varios",
+                "detalle": "Panoramica Antena completa desde varios angulos",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Marquillado",
+                "detalle": "Marquillado",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Altura cinta metrica",
+                "detalle": "Altura cinta metrica",
+                "tipo": "foto"
+              },
+              {
+                "nombre": "Panoramica general instalacion MW",
+                "detalle": "Panoramica general instalacion MW",
+                "tipo": "foto"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "FPFH Torre",
+    "hijos": [
+      {
+        "nombre": "FPFH UPPER-1",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FPFH UPPER-2",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "FPFH UPPER-3",
+        "hijos": [
+          {
+            "nombre": "Panoramica modulo abierto",
+            "detalle": "Panoramica modulo abierto",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica modulo cerrado",
+            "detalle": "Panoramica modulo cerrado",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Puertos DC libres",
+            "detalle": "Puertos DC libres.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica marquillado del modulo",
+            "detalle": "Panoramica marquillado del modulo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Panoramica general del módulo",
+            "detalle": "Panoramica general del módulo donde se evidencie su instalacion. Desdes diferentes ángulos.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Busbar",
+            "detalle": "Busbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Detalles de las marquillas",
+            "detalle": "Detalles de las marquillas de los equipos conectados",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "BUSSBAR EN RACK VERTICAL",
+    "hijos": [
+      {
+        "nombre": "SPT",
+        "hijos": [
+          {
+            "nombre": "Bussbar en rack vertical",
+            "detalle": "Bussbar en rack vertical",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de cada busbar",
+            "detalle": "Altura de cada busbar",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "PARARRAYOS",
+    "hijos": [
+      {
+        "nombre": "Foto panoramica",
+        "detalle": "Foto panoramica",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "foto detallada",
+        "detalle": "foto detallada",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Conexion con guaya bajante",
+        "detalle": "Conexion con guaya bajante",
+        "tipo": "foto"
+      }
+    ]
+  },
+  {
+    "nombre": "LUZ DE OBSTRUCCION",
+    "hijos": [
+      {
+        "nombre": "Luces de obstruccion",
+        "hijos": [
+          {
+            "nombre": "Luces de obstruccion",
+            "detalle": "Luces de obstruccion",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Panoramicas 5G",
+    "hijos": [
+      {
+        "nombre": "G1",
+        "hijos": [
+          {
+            "nombre": "Foto del AZ central con el que se proyecta",
+            "detalle": "Foto del AZ central con el que se proyecta cada sector",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+60° con respecto al AZ central (eje",
+            "detalle": "+60° con respecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-60° con resecto al AZ central (eje",
+            "detalle": "-60° con resecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30° con respecto a AZ central (eje vertical)",
+            "detalle": "+30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30° con respecto a AZ central (eje vertical)",
+            "detalle": "-30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de (2)",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "G2",
+        "hijos": [
+          {
+            "nombre": "Foto del AZ central con el que se proyecta",
+            "detalle": "Foto del AZ central con el que se proyecta cada sector",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+60° con respecto al AZ central (eje",
+            "detalle": "+60° con respecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-60° con resecto al AZ central (eje",
+            "detalle": "-60° con resecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30° con respecto a AZ central (eje vertical)",
+            "detalle": "+30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30° con respecto a AZ central (eje vertical)",
+            "detalle": "-30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de (2)",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "G3",
+        "hijos": [
+          {
+            "nombre": "Foto del AZ central con el que se proyecta",
+            "detalle": "Foto del AZ central con el que se proyecta cada sector",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+60° con respecto al AZ central (eje",
+            "detalle": "+60° con respecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-60° con resecto al AZ central (eje",
+            "detalle": "-60° con resecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30° con respecto a AZ central (eje vertical)",
+            "detalle": "+30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30° con respecto a AZ central (eje vertical)",
+            "detalle": "-30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de (2)",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "G4",
+        "hijos": [
+          {
+            "nombre": "Foto del AZ central con el que se proyecta",
+            "detalle": "Foto del AZ central con el que se proyecta cada sector",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+60° con respecto al AZ central (eje",
+            "detalle": "+60° con respecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-60° con resecto al AZ central (eje",
+            "detalle": "-60° con resecto al AZ central (eje horizontal)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "+30° con respecto a AZ central (eje vertical)",
+            "detalle": "+30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "-30° con respecto a AZ central (eje vertical)",
+            "detalle": "-30° con respecto a AZ central (eje vertical)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto desde la parte superior de (2)",
+            "detalle": "Foto desde la parte superior de donde se hace la proyeccion de cada antena",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "LINEA DE VIDA",
+    "hijos": [
+      {
+        "nombre": "General linea de vida",
+        "detalle": "General linea de vida",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Tornilleria",
+        "detalle": "Tornilleria",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Guaya",
+        "detalle": "Guaya",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Viendo hacia arriba",
+        "detalle": "Viendo hacia arriba",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Viendo hacia Abajo",
+        "detalle": "Viendo hacia Abajo",
+        "tipo": "foto"
+      }
+    ],
+    "nota": "LIENA DE VIDA SUPERIOR E INFERIOR"
+  },
+  {
+    "nombre": "SOPORTES EN TORRE (soportes H, diversidad, bandera).",
+    "hijos": [
+      {
+        "nombre": "SOPORTE-1",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-2",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-3",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-4",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-5",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-6",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-7",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-8",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-9",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-10",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-11",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-12",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-13",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-14",
+        "hijos": [
+          {
+            "nombre": "Medida entre mastiles laterales",
+            "detalle": "Medida entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "medida de mastiles",
+            "detalle": "medida de mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida de brazo adosado a montante",
+            "detalle": "Medida de brazo adosado a montante",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "AUTOSOPORTADOS EN TERRAZA",
+    "hijos": [
+      {
+        "nombre": "SOPORTE-1",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-2",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-3",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-4",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-5",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-6",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-7",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-8",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-9",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      },
+      {
+        "nombre": "SOPORTE-10",
+        "hijos": [
+          {
+            "nombre": "Foto general del autosoprtado con su base",
+            "detalle": "Foto general del autosoprtado con su base",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto altura mastil principal",
+            "detalle": "Foto altura mastil principal",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastil principal con pie de rey",
+            "detalle": "Foto calibre mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastil principal con pie de rey",
+            "detalle": "Foto diametro mastil principal con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto lingitud mastiles laterales",
+            "detalle": "Foto lingitud mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto calibre mastiles laterales con pie",
+            "detalle": "Foto calibre mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto diametro mastiles laterales con pie",
+            "detalle": "Foto diametro mastiles laterales con pie de rey",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto medida de uno de los pie de amigo",
+            "detalle": "Foto medida de uno de los pie de amigo",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre mastiles",
+            "detalle": "Foto de longitud de separacion entre mastiles",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Foto de longitud de separacion entre",
+            "detalle": "Foto de longitud de separacion entre mastiles laterales",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Bussbar",
+            "detalle": "Bussbar",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la Terraza",
+            "detalle": "Altura de la Terraza",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "MEDIDAS DE CANASTILLA y ALTURA DE TORRE",
+    "hijos": [
+      {
+        "nombre": "CANASTILLA",
+        "hijos": [
+          {
+            "nombre": "Alto de la canastilla",
+            "detalle": "Alto de la canastilla",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Longitud de una cara",
+            "detalle": "Longitud de una cara",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida del lado pequeño de la canastilla",
+            "detalle": "Medida del lado pequeño de la canastilla (torres triangulares)",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Medida desde la arista de la canastilla",
+            "detalle": "Medida desde la arista de la canastilla hasta la arsita de la torre.",
+            "tipo": "foto"
+          },
+          {
+            "nombre": "Altura de la torre",
+            "detalle": "Altura de la torre",
+            "tipo": "foto"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nombre": "Estructuras especiales",
+    "hijos": [
+      {
+        "nombre": "Diametro del radomos",
+        "detalle": "Diametro del radomos",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "perimetro de postes (base y maxima altura)",
+        "detalle": "perimetro de postes (base y maxima altura)",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "perimetro de monopolos (base y maxima altura)",
+        "detalle": "perimetro de monopolos (base y maxima altura)",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Placa de postes",
+        "detalle": "Placa de postes",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Distancia entre anillos del radomo",
+        "detalle": "Distancia entre anillos del radomo",
+        "tipo": "foto"
+      }
+    ],
+    "nota": "POSTES, MONOPOLOS, RADOMOS"
+  }
+]

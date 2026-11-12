@@ -1,5 +1,20 @@
 [
   {
+    "nombre": "VIDEO INGRESO Y SALIDA",
+    "hijos": [
+      {
+        "nombre": "Video de ingreso",
+        "detalle": "Video de INGRESO: desde el ingreso a la estación, todos los equipos abiertos, recorrido por todo el interior, buena resolución",
+        "tipo": "video"
+      },
+      {
+        "nombre": "Video de salida",
+        "detalle": "Video de SALIDA: estado en que se deja la estación",
+        "tipo": "video"
+      }
+    ]
+  },
+  {
     "nombre": "Posicionamiento",
     "hijos": [
       {
@@ -1226,6 +1241,37 @@
     ]
   },
   {
+    "nombre": "LINEA DE VIDA PISO",
+    "hijos": [
+      {
+        "nombre": "General linea de vida",
+        "detalle": "General linea de vida",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Tornilleria",
+        "detalle": "Tornilleria",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Guaya",
+        "detalle": "Guaya",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Viendo hacia arriba",
+        "detalle": "Viendo hacia arriba",
+        "tipo": "foto"
+      },
+      {
+        "nombre": "Viendo hacia Abajo",
+        "detalle": "Viendo hacia Abajo",
+        "tipo": "foto"
+      }
+    ],
+    "nota": "LINEA DE VIDA PISO"
+  },
+  {
     "nombre": "RIESGOS",
     "hijos": [
       {
@@ -1258,6 +1304,16 @@
             "tipo": "foto"
           }
         ]
+      }
+    ]
+  },
+  {
+    "nombre": "VIDEO CANASTILLA",
+    "hijos": [
+      {
+        "nombre": "Video de canastilla",
+        "detalle": "Video de CANASTILLA: equipos y antenas en canastilla, más estado de soportería y estructura",
+        "tipo": "video"
       }
     ]
   },
@@ -3588,7 +3644,7 @@
     ]
   },
   {
-    "nombre": "LINEA DE VIDA",
+    "nombre": "LINEA DE VIDA TORRE",
     "hijos": [
       {
         "nombre": "General linea de vida",

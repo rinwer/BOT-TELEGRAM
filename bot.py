@@ -3,6 +3,7 @@ import re
 import json
 import html
 import logging
+import asyncio
 from datetime import datetime
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -369,12 +370,58 @@ def teclado_nodo(sitio, indices, pagina=0, vista=None):
     if nav:
         keyboard.append(nav)
 
+    fila_controles = []
     if indices:
-        etiqueta = "⬅️ Volver" if len(indices) > 1 else "⬅️ Volver al Menú"
-        keyboard.append([InlineKeyboardButton(etiqueta, callback_data=cb(indices[:-1]))])
+        etiqueta = "⬅️ Volver" if len(indices) > 1 else "⬅️ Menú Principal"
+        fila_controles.append(InlineKeyboardButton(etiqueta, callback_data=cb(indices[:-1])))
+        fila_controles.append(InlineKeyboardButton("🙈 Minimizar", callback_data=f"c:min:{'.'.join(str(i) for i in indices)}"))
     elif vista:
-        keyboard.append([InlineKeyboardButton("🔄 Cambiar (Piso / Torre / Todo)", callback_data="v:")])
+        fila_controles.append(InlineKeyboardButton("🔄 Cambiar (Piso / Torre / Todo)", callback_data="v:"))
+    fila_controles.append(InlineKeyboardButton("❌ Cerrar", callback_data="c:del"))
+    keyboard.append(fila_controles)
     return InlineKeyboardMarkup(keyboard)
+
+
+def texto_compacto(sitio, indices):
+    """Genera una tarjeta limpia y mínima de 2 líneas cuando el menú está minimizado."""
+    nodo, nombres, ruta = nodo_por_indices(indices)
+    prog = leer_prog(sitio, ruta) if ruta else {"fotos": 0, "estado": None}
+    estado_str = ""
+    if prog.get("estado") == "ok":
+        estado_str = f" {ICONO_OK} (Lista)"
+    elif prog.get("estado") == "na":
+        estado_str = f" {ICONO_NA} (No aplica)"
+    return (
+        f"📌 <b>Carpeta Activa:</b> <code>{esc(' > '.join(nombres))}</code>{estado_str}\n"
+        f"📸 Fotos recibidas: <b>{prog.get('fotos', 0)}</b> | <i>Listo para recibir fotos.</i>"
+    )
+
+
+def teclado_compacto(indices):
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("📖 Desplegar Menú", callback_data=f"c:exp:{'.'.join(str(i) for i in indices)}"),
+            InlineKeyboardButton("❌ Cerrar", callback_data="c:del"),
+        ]
+    ])
+
+
+async def borrar_mensaje_despues(bot, chat_id, message_id, delay=7):
+    """Elimina un mensaje automáticamente trascurridos N segundos para no ensuciar el chat."""
+    await asyncio.sleep(delay)
+    try:
+        await bot.delete_message(chat_id=chat_id, message_id=message_id)
+    except Exception:
+        pass
+
+
+async def responder_temporal(update: Update, context: ContextTypes.DEFAULT_TYPE, texto: str, delay: int = 7):
+    """Envía un aviso que se auto-elimina para mantener el chat limpio."""
+    try:
+        msg = await update.message.reply_text(texto, parse_mode="HTML")
+        asyncio.create_task(borrar_mensaje_despues(context.bot, msg.chat.id, msg.message_id, delay))
+    except Exception as e:
+        logging.debug("Error enviando respuesta temporal: %s", e)
 
 
 def texto_nodo(sitio, indices, pagina=0, nombre="", vista=None):
@@ -409,7 +456,7 @@ def texto_nodo(sitio, indices, pagina=0, nombre="", vista=None):
             lineas.append(f"{k}. {tipo}{esc(h['detalle'])}")
         texto += "\n\n<b>Fotos requeridas:</b>\n" + "\n".join(lineas)
 
-        texto += "\n\n📸 Envíe las fotos aquí; se guardan automáticamente en OneDrive."
+        texto += "\n\n📸 Envíe las fotos aquí; se guardan automáticamente."
         if any(h.get("tipo") == "lista" for h in hojas):
             texto += "\n📝 Los datos marcados con 📝 envíelos como mensaje de texto."
         texto += f"\nFotos enviadas: <b>{prog['fotos']}</b>"
@@ -425,21 +472,31 @@ def texto_nodo(sitio, indices, pagina=0, nombre="", vista=None):
     return texto
 
 
-async def refrescar_lista(context, chat_id, sitio, activa):
+async def refrescar_lista(context, chat_id, sitio, activa, uk=None):
     """Actualiza el mensaje de la lista (contador de fotos) después de guardar algo."""
     msg_id = activa.get("msg_id")
     if not msg_id:
         return
     indices = activa["indices"]
+    es_min = usuario(uk).get("menu_min", False) if uk else False
     try:
-        await context.bot.edit_message_text(
-            chat_id=int(chat_id),
-            message_id=msg_id,
-            text=texto_nodo(sitio, indices),
-            reply_markup=teclado_nodo(sitio, indices),
-            parse_mode="HTML",
-        )
-    except Exception as e:  # mensaje borrado, sin cambios, límite de ediciones, etc.
+        if es_min:
+            await context.bot.edit_message_text(
+                chat_id=int(chat_id),
+                message_id=msg_id,
+                text=texto_compacto(sitio, indices),
+                reply_markup=teclado_compacto(indices),
+                parse_mode="HTML",
+            )
+        else:
+            await context.bot.edit_message_text(
+                chat_id=int(chat_id),
+                message_id=msg_id,
+                text=texto_nodo(sitio, indices),
+                reply_markup=teclado_nodo(sitio, indices),
+                parse_mode="HTML",
+            )
+    except Exception as e:  # mensaje borrado, sin cambios, etc.
         logging.debug("No se pudo refrescar la lista: %s", e)
 
 
@@ -457,6 +514,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"📍 <b>Sitio Actual:</b> <code>{esc(sitio_actual)}</code>\n\n"
     )
     if chat and chat.type in ("group", "supergroup"):
+        # En grupos, borrar el comando /start del usuario para no ensuciar
+        try:
+            await update.message.delete()
+        except Exception:
+            pass
         texto += (
             "✅ <i>Sitio asignado automáticamente desde este grupo.</i>\n\n"
             "Comandos disponibles:\n"
@@ -464,14 +526,15 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• <code>/piso</code> · <code>/torre</code> · <code>/todo</code> - Abre directo esa vista.\n"
             "• <code>/sitio [NOMBRE]</code> - Consultar o cambiar el sitio si se requiere."
         )
+        msg = await context.bot.send_message(chat_id=int(chat_id), text=texto, parse_mode="HTML")
+        asyncio.create_task(borrar_mensaje_despues(context.bot, int(chat_id), msg.message_id, delay=15))
     else:
         texto += (
             "Comandos disponibles:\n"
             "• <code>/sitio NOMBRE_SITIO</code> - Configura el sitio activo.\n"
             "• <code>/menu</code> - Muestra el checklist de inspección."
         )
-
-    await update.message.reply_text(texto, parse_mode="HTML")
+        await update.message.reply_text(texto, parse_mode="HTML")
 
 
 async def set_sitio(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -484,15 +547,17 @@ async def set_sitio(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not context.args:
         sitio_actual = obtener_sitio_chat(chat, user_id)
         if sitio_actual:
-            await update.message.reply_text(
+            await responder_temporal(
+                update, context,
                 f"📍 <b>Sitio actual:</b> <code>{esc(sitio_actual)}</code>\n\n"
                 "Para cambiarlo escriba: <code>/sitio NUEVO_NOMBRE</code>",
-                parse_mode="HTML",
+                delay=10
             )
         else:
-            await update.message.reply_text(
+            await responder_temporal(
+                update, context,
                 "⚠️ Indique el nombre del sitio. Ej: <code>/sitio TFO_BOGOTÁ</code>",
-                parse_mode="HTML",
+                delay=10
             )
         return
 
@@ -503,9 +568,10 @@ async def set_sitio(update: Update, context: ContextTypes.DEFAULT_TYPE):
     guardar_sesiones()
 
     os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, nombre_sitio), exist_ok=True)
-    await update.message.reply_text(
+    await responder_temporal(
+        update, context,
         f"✅ <b>Sitio configurado:</b>\n<code>{esc(nombre_sitio)}</code>\n\nCarpeta lista en el almacenamiento.",
-        parse_mode="HTML",
+        delay=10
     )
 
 
@@ -516,25 +582,45 @@ async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, vista
     user_id = user.id if user else 0
     uk = uk_de(chat_id, user_id)
 
+    # 1. En grupos, borrar el comando /menu del usuario para no saturar el chat
+    if chat and chat.type in ("group", "supergroup"):
+        try:
+            await update.message.delete()
+        except Exception:
+            pass
+
     sitio = obtener_sitio_chat(chat, user_id)
     if not sitio:
-        await update.message.reply_text(
+        await responder_temporal(
+            update, context,
             "⚠️ Primero configure su sitio con <code>/sitio NOMBRE_SITIO</code>",
-            parse_mode="HTML",
+            delay=7
         )
         return
 
+    # 2. Borrar el menú anterior para mantener siempre un único menú vivo
+    prev_msg_id = usuario(uk).get("menu_msg_id")
+    if prev_msg_id:
+        try:
+            await context.bot.delete_message(chat_id=int(chat_id), message_id=prev_msg_id)
+        except Exception:
+            pass
+
     usuario(uk)["sitio"] = sitio
     usuario(uk).pop("categoria_activa", None)
+    usuario(uk)["menu_min"] = False
     if vista:
         usuario(uk)["vista"] = vista
     else:
         usuario(uk).pop("vista", None)  # /menu pregunta de nuevo Piso / Torre / Todo
-    msg = await update.message.reply_text(
-        texto_nodo(sitio, [], nombre=user.first_name if user else "", vista=vista),
+
+    msg = await context.bot.send_message(
+        chat_id=int(chat_id),
+        text=texto_nodo(sitio, [], nombre=user.first_name if user else "", vista=vista),
         reply_markup=teclado_nodo(sitio, [], vista=vista),
         parse_mode="HTML",
     )
+    usuario(uk)["menu_msg_id"] = msg.message_id
     registrar_dueno(chat_id, msg.message_id, uk)  # este menú es de quien lo pidió
     guardar_sesiones()
 
@@ -579,6 +665,42 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         data = query.data
         pagina = 0
+
+        # Acciones de control de vista (Cerrar / Minimizar / Desplegar)
+        if data == "c:del":
+            usuario(uk).pop("menu_msg_id", None)
+            usuario(uk).pop("menu_min", None)
+            guardar_sesiones()
+            try:
+                await query.message.delete()
+            except Exception:
+                pass
+            return
+
+        if data.startswith("c:min:"):
+            indices = parse_indices(data[6:])
+            usuario(uk)["menu_min"] = True
+            guardar_sesiones()
+            await query.edit_message_text(
+                texto_compacto(sitio, indices),
+                reply_markup=teclado_compacto(indices),
+                parse_mode="HTML",
+            )
+            return
+
+        if data.startswith("c:exp:"):
+            indices = parse_indices(data[6:])
+            usuario(uk)["menu_min"] = False
+            guardar_sesiones()
+            vista = usuario(uk).get("vista")
+            await query.edit_message_text(
+                texto_nodo(sitio, indices, 0, nombre=query.from_user.first_name or "", vista=vista),
+                reply_markup=teclado_nodo(sitio, indices, 0, vista=vista),
+                parse_mode="HTML",
+            )
+            return
+
+        usuario(uk)["menu_min"] = False
 
         if data.startswith("v:"):
             # Elegir vista del menú principal: v:piso | v:torre | v:todo | v: (cambiar)
@@ -685,14 +807,14 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not estado:
         sitio = obtener_sitio_chat(chat, user.id)
         if sitio:
-            await update.message.reply_text(
-                f"⚠️ Para el sitio <b>{esc(sitio)}</b>, primero abra la carpeta en <code>/menu</code> para clasificar las fotos.",
-                parse_mode="HTML",
+            texto_aviso = (
+                f"⚠️ Para el sitio <b>{esc(sitio)}</b>, primero abra la carpeta en <code>/menu</code> para clasificar las fotos."
             )
         else:
-            await update.message.reply_text(
+            texto_aviso = (
                 "⚠️ Antes de enviar fotos, configure el sitio (/sitio) y abra una carpeta con su lista de fotos en /menu."
             )
+        await responder_temporal(update, context, texto_aviso, delay=7)
         return
 
     sitio, activa, nombres, ruta, hojas = estado
@@ -721,7 +843,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     guardar_sesiones()
 
     await confirmar(update)
-    await refrescar_lista(context, chat_id, sitio, activa)
+    await refrescar_lista(context, chat_id, sitio, activa, uk=uk)
 
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -784,7 +906,8 @@ async def on_bot_added_to_group(update: Update, context: ContextTypes.DEFAULT_TY
             "👉 Escriban <code>/menu</code> para abrir el checklist y comenzar la inspección."
         )
         try:
-            await context.bot.send_message(chat_id=chat.id, text=texto, parse_mode="HTML")
+            msg_bienvenida = await context.bot.send_message(chat_id=chat.id, text=texto, parse_mode="HTML")
+            asyncio.create_task(borrar_mensaje_despues(context.bot, chat.id, msg_bienvenida.message_id, delay=25))
         except Exception as e:
             logging.warning("No se pudo enviar mensaje de bienvenida al grupo: %s", e)
 
@@ -799,9 +922,10 @@ async def on_new_chat_title(update: Update, context: ContextTypes.DEFAULT_TYPE):
     os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, nombre_sitio), exist_ok=True)
     guardar_sesiones()
 
-    await update.message.reply_text(
+    await responder_temporal(
+        update, context,
         f"🔄 <b>Nombre del sitio actualizado según el nuevo título del grupo:</b>\n<code>{esc(nombre_sitio)}</code>",
-        parse_mode="HTML",
+        delay=10
     )
 
 

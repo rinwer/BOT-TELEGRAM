@@ -4,6 +4,7 @@ import json
 import html
 import logging
 import asyncio
+import copy
 from datetime import datetime
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -58,7 +59,7 @@ ICONO_PROCESO = "🔸"     # tiene fotos pero aún no se marcó como lista
 with open(os.path.join(BASE_DIR, CHECKLIST_FILE), "r", encoding="utf-8") as f:
     ARBOL = json.load(f)
 
-RAIZ = {"nombre": "", "hijos": ARBOL}
+RAIZ = {"nombre": "", "hijos": ARBOL, "_raiz": True}
 
 # --- Vistas del menú principal: Piso / Torre / Todo ---------------------------
 # Las carpetas ANTES de TORRE_DESDE son de Piso; desde esa carpeta en adelante,
@@ -156,7 +157,7 @@ def cargar_sesiones():
                 sesiones = json.load(f)
         except Exception:
             logging.exception("No se pudo leer el archivo de sesiones")
-    for k in ("usuarios", "progreso", "mensajes", "sitios_chat"):
+    for k in ("usuarios", "progreso", "mensajes", "sitios_chat", "extras"):
         sesiones.setdefault(k, {})
 
 
@@ -230,6 +231,37 @@ def carpeta_destino(sitio, ruta):
     return os.path.join(ONEDRIVE_BASE_PATH, sitio, *[limpiar_nombre(p) for p in ruta])
 
 
+# --- Carpetas que el técnico puede agregar (ej. antenas con nombre propio) ----
+# Clave: nombre del menú. "plantilla": índice del hijo cuyos ítems se copian.
+# Las agregadas se guardan por sitio en sesiones["extras"][sitio][menú] = [nombres].
+DINAMICOS = {"RR ANTENA": {"boton": "➕ Agregar antena", "plantilla": 0, "ejemplo": "Sector 1 LTE"}}
+_ARBOLES = {}  # caché: árbol completo de cada sitio
+
+
+def es_dinamico(nodo):
+    return nodo.get("nombre") in DINAMICOS
+
+
+def arbol_de(sitio):
+    """Árbol del checklist de un sitio: el base + las carpetas que agregó el técnico."""
+    extras = sesiones.get("extras", {}).get(sitio) if sitio else None
+    if not extras:
+        return RAIZ
+    if sitio not in _ARBOLES:
+        raiz = copy.deepcopy(RAIZ)
+        for nodo in raiz["hijos"]:
+            cfg = DINAMICOS.get(nodo.get("nombre"))
+            if not cfg or not extras.get(nodo["nombre"]):
+                continue
+            molde = nodo["hijos"][cfg["plantilla"]]
+            for nombre in extras[nodo["nombre"]]:
+                nuevo = copy.deepcopy(molde)
+                nuevo["nombre"] = nombre
+                nodo["hijos"].append(nuevo)
+        _ARBOLES[sitio] = raiz
+    return _ARBOLES[sitio]
+
+
 def hojas_de(nodo):
     """Ítems (lista de fotos requeridas) de un menú."""
     return [h for h in nodo.get("hijos", []) if "hijos" not in h]
@@ -239,19 +271,19 @@ def menus_de(nodo, vista=None):
     """Submenús (botones) de un menú, con su índice real.
     En la raíz, `vista` ("piso"/"torre") filtra las carpetas mostradas."""
     menus = [(i, h) for i, h in enumerate(nodo.get("hijos", [])) if "hijos" in h]
-    if nodo is RAIZ and vista:
+    if nodo.get("_raiz") and vista:
         menus = [(i, h) for i, h in menus if visible_en_vista(i, h, vista)]
     return menus
 
 
-def nodo_por_indices(indices):
+def nodo_por_indices(indices, sitio=None):
     """
     Devuelve (nodo, nombres, ruta_carpeta).
       nombres      = ruta que ve el técnico en los menús
       ruta_carpeta = ruta real en OneDrive (sin los menús "virtual")
     Con indices vacío devuelve la raíz.
     """
-    nodo, nombres, ruta = RAIZ, [], []
+    nodo, nombres, ruta = arbol_de(sitio), [], []
     for i in indices:
         nodo = nodo["hijos"][i]
         nombres.append(nodo["nombre"])
@@ -332,7 +364,7 @@ def parse_indices(cuerpo):
 
 # --- Pantallas ---------------------------------------------------------------
 def teclado_nodo(sitio, indices, pagina=0, vista=None):
-    nodo, nombres, ruta = nodo_por_indices(indices)
+    nodo, nombres, ruta = nodo_por_indices(indices, sitio)
     keyboard = []
 
     # Pantalla inicial: elegir qué se va a enviar
@@ -357,14 +389,21 @@ def teclado_nodo(sitio, indices, pagina=0, vista=None):
     inicio = pagina * POR_PAGINA
     fin = inicio + POR_PAGINA
     botones = []
+    dinamico = es_dinamico(nodo)  # nombres libres de antena: más anchos y con ícono
     for i, hijo in menus[inicio:fin]:
         r = ruta + ([] if hijo.get("virtual") else [hijo["nombre"]])
-        botones.append(
-            InlineKeyboardButton(etiqueta_boton(sitio, hijo, r), callback_data=cb(indices + [i]))
-        )
-    columnas = 3  # cuadrícula de 3 columnas
+        etiqueta = etiqueta_boton(sitio, hijo, r)
+        if dinamico and not etiqueta.startswith((ICONO_OK, ICONO_NA, ICONO_PROCESO, "📡")):
+            etiqueta = "📡 " + etiqueta
+        botones.append(InlineKeyboardButton(etiqueta, callback_data=cb(indices + [i])))
+    columnas = 2 if dinamico else 3  # cuadrícula
     for k in range(0, len(botones), columnas):
         keyboard.append(botones[k:k + columnas])
+    if dinamico:
+        keyboard.append([InlineKeyboardButton(
+            DINAMICOS[nodo["nombre"]]["boton"],
+            callback_data="g:" + ".".join(str(i) for i in indices),
+        )])
 
     nav = []
     if pagina > 0:
@@ -388,7 +427,7 @@ def teclado_nodo(sitio, indices, pagina=0, vista=None):
 
 def texto_compacto(sitio, indices):
     """Genera una tarjeta limpia y mínima de 2 líneas cuando el menú está minimizado."""
-    nodo, nombres, ruta = nodo_por_indices(indices)
+    nodo, nombres, ruta = nodo_por_indices(indices, sitio)
     prog = leer_prog(sitio, ruta) if ruta else {"fotos": 0, "estado": None}
     estado_str = ""
     if prog.get("estado") == "ok":
@@ -429,7 +468,7 @@ async def responder_temporal(update: Update, context: ContextTypes.DEFAULT_TYPE,
 
 
 def texto_nodo(sitio, indices, pagina=0, nombre="", vista=None):
-    nodo, nombres, ruta = nodo_por_indices(indices)
+    nodo, nombres, ruta = nodo_por_indices(indices, sitio)
     if not indices:
         quien = f"👤 <b>{esc(nombre)}</b>\n" if nombre else ""
         if not vista:
@@ -711,6 +750,25 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         usuario(uk)["menu_min"] = False
 
+        if data.startswith("g:"):
+            # Agregar una carpeta con nombre propio (ej. antena): se pide el nombre por texto
+            indices = parse_indices(data[2:])
+            nodo, nombres, ruta = nodo_por_indices(indices, sitio)
+            if not es_dinamico(nodo):
+                return
+            usuario(uk)["esperando_nombre"] = {"indices": indices, "msg_id": query.message.message_id}
+            usuario(uk).pop("categoria_activa", None)
+            guardar_sesiones()
+            ejemplo = DINAMICOS[nodo["nombre"]]["ejemplo"]
+            await query.edit_message_text(
+                f"✏️ <b>Escriba el nombre de la nueva antena</b> y envíelo como mensaje.\n"
+                f"Ejemplo: <code>{esc(ejemplo)}</code>",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✖️ Cancelar", callback_data=cb(indices))]]),
+                parse_mode="HTML",
+            )
+            return
+        usuario(uk).pop("esperando_nombre", None)  # cualquier otro botón cancela la espera
+
         if data.startswith("v:"):
             # Elegir vista del menú principal: v:piso | v:torre | v:todo | v: (cambiar)
             v = data[2:]
@@ -723,7 +781,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             # Listo / No aplica / Reabrir (check general de la carpeta)
             _, accion, cuerpo = data.split(":", 2)
             indices = parse_indices(cuerpo)
-            nodo, nombres, ruta = nodo_por_indices(indices)
+            nodo, nombres, ruta = nodo_por_indices(indices, sitio)
             if hojas_de(nodo):
                 prog = leer_prog(sitio, ruta)
                 if accion == "l":
@@ -742,12 +800,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 pagina = int(p)
             indices = parse_indices(cuerpo)
 
-        nodo, nombres, ruta = nodo_por_indices(indices)
+        nodo, nombres, ruta = nodo_por_indices(indices, sitio)
 
         # Botón viejo de un ítem (versión anterior): se abre su menú
         if indices and "hijos" not in nodo:
             indices, pagina = indices[:-1], 0
-            nodo, nombres, ruta = nodo_por_indices(indices)
+            nodo, nombres, ruta = nodo_por_indices(indices, sitio)
 
         if hojas_de(nodo):
             # Las fotos y textos que lleguen ahora se guardan en esta carpeta
@@ -787,7 +845,7 @@ def obtener_activa(uk, chat=None, user_id=None):
     if not sitio or not isinstance(activa, dict) or "indices" not in activa:
         return None
     try:
-        nodo, nombres, ruta = nodo_por_indices(activa["indices"])
+        nodo, nombres, ruta = nodo_por_indices(activa["indices"], sitio)
     except (IndexError, KeyError):
         return None
     hojas = hojas_de(nodo)
@@ -875,6 +933,51 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await refrescar_lista(context, chat_id, sitio, activa, uk=uk)
 
 
+async def recibir_nombre_carpeta(update, context, uk, chat, user, espera):
+    """El técnico escribió el nombre de la antena (u otra carpeta dinámica) que quiere agregar."""
+    chat_id = str(chat.id)
+    sitio = usuario(uk).get("sitio") or obtener_sitio_chat(chat, user.id)
+    if not sitio:
+        return
+    nombre = " ".join((update.message.text or "").split())
+    nodo, _, _ = nodo_por_indices(espera["indices"], sitio)
+    existentes = {limpiar_nombre(h["nombre"]).lower() for h in nodo["hijos"]}
+
+    problema = None
+    if not nombre or len(nombre) > 40:
+        problema = "El nombre debe tener entre 1 y 40 caracteres."
+    elif limpiar_nombre(nombre).lower() in existentes:
+        problema = "Ya existe una carpeta con ese nombre."
+    if problema:
+        await responder_temporal(update, context, f"⚠️ {esc(problema)} Escriba otro nombre.", delay=8)
+        return
+
+    sesiones.setdefault("extras", {}).setdefault(sitio, {}).setdefault(nodo["nombre"], []).append(nombre)
+    _ARBOLES.pop(sitio, None)
+    usuario(uk).pop("esperando_nombre", None)
+
+    nodo, _, _ = nodo_por_indices(espera["indices"], sitio)
+    indices = espera["indices"] + [len(nodo["hijos"]) - 1]
+    usuario(uk)["categoria_activa"] = {"indices": indices, "msg_id": espera["msg_id"]}
+    guardar_sesiones()
+
+    try:  # modo limpio: se borra el mensaje con el nombre
+        await update.message.delete()
+    except Exception:
+        pass
+    vista = usuario(uk).get("vista")
+    try:  # se abre la carpeta nueva en el mismo menú para empezar a enviar fotos
+        await context.bot.edit_message_text(
+            chat_id=int(chat_id),
+            message_id=espera["msg_id"],
+            text=texto_nodo(sitio, indices, 0, nombre=user.first_name or "", vista=vista),
+            reply_markup=teclado_nodo(sitio, indices, 0, vista),
+            parse_mode="HTML",
+        )
+    except Exception as e:
+        logging.debug("No se pudo abrir la carpeta nueva: %s", e)
+
+
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
     user = update.effective_user
@@ -882,6 +985,12 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not user:
         return
     uk = uk_de(chat_id, user.id)
+
+    espera = usuario(uk).get("esperando_nombre")
+    if espera:
+        await recibir_nombre_carpeta(update, context, uk, chat, user, espera)
+        return
+
     estado = obtener_activa(uk, chat=chat, user_id=user.id)
     if not estado:
         return

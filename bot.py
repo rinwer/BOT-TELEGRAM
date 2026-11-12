@@ -12,6 +12,7 @@ from telegram.ext import (
     ContextTypes,
     CommandHandler,
     CallbackQueryHandler,
+    ChatMemberHandler,
     MessageHandler,
     filters,
 )
@@ -62,7 +63,8 @@ RAIZ = {"nombre": "", "hijos": ARBOL}
 #   "usuarios": {"<chat>:<usuario>": {"sitio": ..., "categoria_activa": {...}}}
 #   "progreso": {"<sitio>": {"<ruta carpeta>": {"estado": None|"ok"|"na", "fotos": n}}}
 #   "mensajes": {"<chat>:<mensaje>": "<chat>:<usuario>"}   (dueño de cada menú)
-sesiones = {"usuarios": {}, "progreso": {}, "mensajes": {}}
+#   "sitios_chat": {"<chat_id>": "<nombre_sitio>"}          (sitio asignado a grupos)
+sesiones = {"usuarios": {}, "progreso": {}, "mensajes": {}, "sitios_chat": {}}
 
 
 def cargar_sesiones():
@@ -78,7 +80,7 @@ def cargar_sesiones():
                 sesiones = json.load(f)
         except Exception:
             logging.exception("No se pudo leer el archivo de sesiones")
-    for k in ("usuarios", "progreso", "mensajes"):
+    for k in ("usuarios", "progreso", "mensajes", "sitios_chat"):
         sesiones.setdefault(k, {})
 
 
@@ -113,6 +115,39 @@ def limpiar_nombre(nombre: str) -> str:
 
 def esc(texto: str) -> str:
     return html.escape(texto)
+
+
+def obtener_sitio_chat(chat, user_id=None):
+    """
+    Obtiene el sitio asociado al chat o usuario.
+    Si es un grupo (group/supergroup), toma automáticamente el nombre del grupo
+    para que los técnicos en campo no tengan que configurarlo manualmente.
+    """
+    chat_id = str(chat.id) if chat else ""
+    sitios_chat = sesiones.setdefault("sitios_chat", {})
+
+    # 1. Si ya se guardó para este grupo/chat
+    if chat_id in sitios_chat and sitios_chat[chat_id]:
+        sitio = sitios_chat[chat_id]
+        if user_id:
+            usuario(uk_de(chat_id, user_id))["sitio"] = sitio
+        return sitio
+
+    # 2. Si es un grupo con título, derivarlo automáticamente del título del grupo
+    if chat and chat.type in ("group", "supergroup") and chat.title:
+        sitio = limpiar_nombre(chat.title.strip().upper())
+        sitios_chat[chat_id] = sitio
+        if user_id:
+            usuario(uk_de(chat_id, user_id))["sitio"] = sitio
+        os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, sitio), exist_ok=True)
+        guardar_sesiones()
+        return sitio
+
+    # 3. Si es chat privado, consultar la sesión del usuario
+    if user_id and chat_id:
+        return usuario(uk_de(chat_id, user_id)).get("sitio")
+
+    return None
 
 
 def carpeta_destino(sitio, ruta):
@@ -316,43 +351,77 @@ async def refrescar_lista(context, chat_id, sitio, activa):
 
 # --- Comandos ----------------------------------------------------------------
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    uk = uk_de(update.effective_chat.id, update.effective_user.id)
-    sitio_actual = usuario(uk).get("sitio", "No configurado")
-    await update.message.reply_text(
+    chat = update.effective_chat
+    user = update.effective_user
+    chat_id = str(chat.id) if chat else ""
+    user_id = user.id if user else 0
+    uk = uk_de(chat_id, user_id)
+    sitio_actual = obtener_sitio_chat(chat, user_id) or "No configurado"
+
+    texto = (
         "🤖 <b>Bot de Inspección TSS - Claro</b>\n\n"
         f"📍 <b>Sitio Actual:</b> <code>{esc(sitio_actual)}</code>\n\n"
-        "Comandos disponibles:\n"
-        "• <code>/sitio NOMBRE_SITIO</code> - Configura el sitio activo.\n"
-        "• <code>/menu</code> - Muestra el checklist de inspección.",
-        parse_mode="HTML",
     )
+    if chat and chat.type in ("group", "supergroup"):
+        texto += (
+            "✅ <i>Sitio asignado automáticamente desde este grupo.</i>\n\n"
+            "Comandos disponibles:\n"
+            "• <code>/menu</code> - Muestra el checklist de inspección.\n"
+            "• <code>/sitio [NOMBRE]</code> - Consultar o cambiar el sitio si se requiere."
+        )
+    else:
+        texto += (
+            "Comandos disponibles:\n"
+            "• <code>/sitio NOMBRE_SITIO</code> - Configura el sitio activo.\n"
+            "• <code>/menu</code> - Muestra el checklist de inspección."
+        )
+
+    await update.message.reply_text(texto, parse_mode="HTML")
 
 
 async def set_sitio(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    uk = uk_de(update.effective_chat.id, update.effective_user.id)
+    chat = update.effective_chat
+    user = update.effective_user
+    chat_id = str(chat.id) if chat else ""
+    user_id = user.id if user else 0
+    uk = uk_de(chat_id, user_id)
+
     if not context.args:
-        await update.message.reply_text(
-            "⚠️ Indique el nombre del sitio. Ej: <code>/sitio TFO_BOGOTÁ</code>",
-            parse_mode="HTML",
-        )
+        sitio_actual = obtener_sitio_chat(chat, user_id)
+        if sitio_actual:
+            await update.message.reply_text(
+                f"📍 <b>Sitio actual:</b> <code>{esc(sitio_actual)}</code>\n\n"
+                "Para cambiarlo escriba: <code>/sitio NUEVO_NOMBRE</code>",
+                parse_mode="HTML",
+            )
+        else:
+            await update.message.reply_text(
+                "⚠️ Indique el nombre del sitio. Ej: <code>/sitio TFO_BOGOTÁ</code>",
+                parse_mode="HTML",
+            )
         return
 
     nombre_sitio = limpiar_nombre("_".join(context.args).upper())
+    sesiones.setdefault("sitios_chat", {})[chat_id] = nombre_sitio
     usuario(uk)["sitio"] = nombre_sitio
     usuario(uk).pop("categoria_activa", None)
     guardar_sesiones()
 
     os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, nombre_sitio), exist_ok=True)
     await update.message.reply_text(
-        f"✅ <b>Sitio configurado:</b>\n<code>{esc(nombre_sitio)}</code>\n\nCarpeta lista en OneDrive.",
+        f"✅ <b>Sitio configurado:</b>\n<code>{esc(nombre_sitio)}</code>\n\nCarpeta lista en el almacenamiento.",
         parse_mode="HTML",
     )
 
 
 async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = str(update.effective_chat.id)
-    uk = uk_de(chat_id, update.effective_user.id)
-    sitio = usuario(uk).get("sitio")
+    chat = update.effective_chat
+    user = update.effective_user
+    chat_id = str(chat.id) if chat else ""
+    user_id = user.id if user else 0
+    uk = uk_de(chat_id, user_id)
+
+    sitio = obtener_sitio_chat(chat, user_id)
     if not sitio:
         await update.message.reply_text(
             "⚠️ Primero configure su sitio con <code>/sitio NOMBRE_SITIO</code>",
@@ -360,9 +429,10 @@ async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
+    usuario(uk)["sitio"] = sitio
     usuario(uk).pop("categoria_activa", None)
     msg = await update.message.reply_text(
-        texto_nodo(sitio, [], nombre=update.effective_user.first_name or ""),
+        texto_nodo(sitio, [], nombre=user.first_name if user else ""),
         reply_markup=teclado_nodo(sitio, []),
         parse_mode="HTML",
     )
@@ -387,6 +457,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
 
     sitio = usuario(uk).get("sitio")
+    if not sitio:
+        sitio = obtener_sitio_chat(query.message.chat, query.from_user.id)
+        if sitio:
+            usuario(uk)["sitio"] = sitio
     if not sitio:
         await query.edit_message_text("⚠️ Configure su sitio primero con /sitio")
         return
@@ -450,11 +524,16 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # --- Fotos y texto -----------------------------------------------------------
-def obtener_activa(uk):
+def obtener_activa(uk, chat=None, user_id=None):
     """(sitio, activa, nombres, ruta, hojas) del técnico, o None si no tiene una carpeta con lista abierta."""
     sesion = usuario(uk)
+    sitio = sesion.get("sitio")
+    if not sitio and chat:
+        sitio = obtener_sitio_chat(chat, user_id)
+        if sitio:
+            sesion["sitio"] = sitio
     activa = sesion.get("categoria_activa")
-    if "sitio" not in sesion or not isinstance(activa, dict) or "indices" not in activa:
+    if not sitio or not isinstance(activa, dict) or "indices" not in activa:
         return None
     try:
         nodo, nombres, ruta = nodo_por_indices(activa["indices"])
@@ -463,7 +542,7 @@ def obtener_activa(uk):
     hojas = hojas_de(nodo)
     if not hojas:
         return None
-    return sesion["sitio"], activa, nombres, ruta, hojas
+    return sitio, activa, nombres, ruta, hojas
 
 
 async def confirmar(update: Update):
@@ -475,15 +554,25 @@ async def confirmar(update: Update):
 
 
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = str(update.effective_chat.id)
-    if not update.effective_user:
+    chat = update.effective_chat
+    user = update.effective_user
+    chat_id = str(chat.id) if chat else ""
+    if not user:
         return
-    estado = obtener_activa(uk_de(chat_id, update.effective_user.id))
+    uk = uk_de(chat_id, user.id)
+    estado = obtener_activa(uk, chat=chat, user_id=user.id)
 
     if not estado:
-        await update.message.reply_text(
-            "⚠️ Antes de enviar fotos, configure el sitio (/sitio) y abra una carpeta con su lista de fotos en /menu."
-        )
+        sitio = obtener_sitio_chat(chat, user.id)
+        if sitio:
+            await update.message.reply_text(
+                f"⚠️ Para el sitio <b>{esc(sitio)}</b>, primero abra la carpeta en <code>/menu</code> para clasificar las fotos.",
+                parse_mode="HTML",
+            )
+        else:
+            await update.message.reply_text(
+                "⚠️ Antes de enviar fotos, configure el sitio (/sitio) y abra una carpeta con su lista de fotos en /menu."
+            )
         return
 
     sitio, activa, nombres, ruta, hojas = estado
@@ -516,10 +605,13 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = str(update.effective_chat.id)
-    if not update.effective_user:
+    chat = update.effective_chat
+    user = update.effective_user
+    chat_id = str(chat.id) if chat else ""
+    if not user:
         return
-    estado = obtener_activa(uk_de(chat_id, update.effective_user.id))
+    uk = uk_de(chat_id, user.id)
+    estado = obtener_activa(uk, chat=chat, user_id=user.id)
     if not estado:
         return
 
@@ -537,6 +629,60 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f.write(f"--- {marca} ---\n{update.message.text}\n\n")
 
     await confirmar(update)
+
+
+# --- Eventos de Grupo (Autodetección de Sitio) ------------------------------
+async def on_bot_added_to_group(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Detecta cuando el bot ingresa a un grupo para tomar el nombre/ID automáticamente."""
+    chat = update.effective_chat
+    if not chat or chat.type not in ("group", "supergroup"):
+        return
+
+    es_nuevo = False
+    if update.message and update.message.new_chat_members:
+        for m in update.message.new_chat_members:
+            if m.id == context.bot.id:
+                es_nuevo = True
+                break
+    elif update.my_chat_member:
+        nuevo_estado = update.my_chat_member.new_chat_member.status
+        if nuevo_estado in ("member", "administrator"):
+            es_nuevo = True
+
+    if es_nuevo and chat.title:
+        nombre_sitio = limpiar_nombre(chat.title.strip().upper())
+        sesiones.setdefault("sitios_chat", {})[str(chat.id)] = nombre_sitio
+        os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, nombre_sitio), exist_ok=True)
+        guardar_sesiones()
+
+        texto = (
+            "🤖 <b>¡Bot TSS conectado al grupo!</b>\n\n"
+            f"📍 <b>Sitio detectado automáticamente:</b>\n"
+            f"<code>{esc(nombre_sitio)}</code>\n\n"
+            "✅ Carpeta de almacenamiento lista.\n"
+            "Los técnicos en campo <b>no</b> necesitan configurar el sitio.\n\n"
+            "👉 Escriban <code>/menu</code> para abrir el checklist y comenzar la inspección."
+        )
+        try:
+            await context.bot.send_message(chat_id=chat.id, text=texto, parse_mode="HTML")
+        except Exception as e:
+            logging.warning("No se pudo enviar mensaje de bienvenida al grupo: %s", e)
+
+
+async def on_new_chat_title(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Actualiza el sitio si los técnicos cambian el título del grupo."""
+    chat = update.effective_chat
+    if not chat or not update.message or not update.message.new_chat_title:
+        return
+    nombre_sitio = limpiar_nombre(update.message.new_chat_title.strip().upper())
+    sesiones.setdefault("sitios_chat", {})[str(chat.id)] = nombre_sitio
+    os.makedirs(os.path.join(ONEDRIVE_BASE_PATH, nombre_sitio), exist_ok=True)
+    guardar_sesiones()
+
+    await update.message.reply_text(
+        f"🔄 <b>Nombre del sitio actualizado según el nuevo título del grupo:</b>\n<code>{esc(nombre_sitio)}</code>",
+        parse_mode="HTML",
+    )
 
 
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
@@ -564,6 +710,10 @@ def main():
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.PHOTO | filters.Document.IMAGE, handle_photo))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
+    # Eventos de grupo (Autodetección de Sitio)
+    app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, on_bot_added_to_group))
+    app.add_handler(ChatMemberHandler(on_bot_added_to_group, ChatMemberHandler.MY_CHAT_MEMBER))
+    app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_TITLE, on_new_chat_title))
     app.add_error_handler(error_handler)
 
     print("🤖 Bot corriendo...")

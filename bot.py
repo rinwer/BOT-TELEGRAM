@@ -27,9 +27,13 @@ logging.getLogger("httpx").setLevel(logging.WARNING)  # evita imprimir el token
 TOKEN = os.environ["TELEGRAM_TOKEN"]
 PROXY_URL = os.environ.get("PROXY_URL")  # opcional
 
-ONEDRIVE_BASE_PATH = r"C:\Users\usuario microsoft\OneDrive\TSS\MOD_5G TEMWOK\INFO BOT TSS"
-SESSION_FILE = "sesiones_v2.json"  # estado por técnico (usuario) y avance por sitio
-CHECKLIST_FILE = "checklist.json"  # generado con convertir_excel.py
+ONEDRIVE_BASE_PATH = os.environ.get(
+    "STORAGE_PATH",
+    os.environ.get("ONEDRIVE_BASE_PATH", r"C:\Users\usuario microsoft\OneDrive\TSS\MOD_5G TEMWOK\INFO BOT TSS")
+)
+SESSION_DIR = os.environ.get("SESSION_DIR", BASE_DIR)
+SESSION_FILE = os.environ.get("SESSION_FILE", "sesiones_v2.json")
+CHECKLIST_FILE = os.environ.get("CHECKLIST_FILE", "checklist.json")
 
 POR_PAGINA = 20  # botones de carpeta por pantalla
 
@@ -62,7 +66,11 @@ sesiones = {"usuarios": {}, "progreso": {}, "mensajes": {}}
 
 def cargar_sesiones():
     global sesiones
-    ruta = os.path.join(BASE_DIR, SESSION_FILE)
+    ruta = os.path.join(SESSION_DIR, SESSION_FILE)
+    if not os.path.exists(ruta):
+        ruta_alt = os.path.join(BASE_DIR, SESSION_FILE)
+        if os.path.exists(ruta_alt):
+            ruta = ruta_alt
     if os.path.exists(ruta):
         try:
             with open(ruta, "r", encoding="utf-8") as f:
@@ -91,7 +99,8 @@ def registrar_dueno(chat_id, msg_id, uk):
 
 
 def guardar_sesiones():
-    with open(os.path.join(BASE_DIR, SESSION_FILE), "w", encoding="utf-8") as f:
+    os.makedirs(SESSION_DIR, exist_ok=True)
+    with open(os.path.join(SESSION_DIR, SESSION_FILE), "w", encoding="utf-8") as f:
         json.dump(sesiones, f, ensure_ascii=False, indent=4)
 
 

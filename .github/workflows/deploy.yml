@@ -1,20 +1,44 @@
-name: Desplegar en VPS Hostinger
+name: CI/CD Deploy to VPS
 
 on:
   push:
-    branches:
-      - main
+    branches: [master, main]
 
 jobs:
   deploy:
+    name: Deploy to VPS
     runs-on: ubuntu-latest
+
     steps:
-      - name: Conectar y desplegar en VPS
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          script: |
-            cd /ruta/de/tu/proyecto
-            git pull origin main
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH and Deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          if [ -z "$SSH_PRIVATE_KEY" ] || [ -z "$VPS_HOST" ] || [ -z "$VPS_USER" ]; then
+            echo "Error: Uno o más secrets obligatorios (VPS_SSH_KEY, VPS_HOST, VPS_USER) están vacíos."
+            exit 1
+          fi
+
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # Crear directorio en VPS si no existe
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "mkdir -p ~/tss-bot/storage"
+
+          # Sincronizar archivos del proyecto hacia la VPS
+          rsync -avz \
+            --exclude '.git' \
+            --exclude '.env' \
+            --exclude 'storage' \
+            --exclude '__pycache__' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            ./ "$VPS_USER@$VPS_HOST:~/tss-bot/"
+
+          # Desplegar con Docker Compose en la VPS
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "cd ~/tss-bot && docker compose up -d --build"

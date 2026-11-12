@@ -1,0 +1,22 @@
+services:
+  tss-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tss-bot
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - STORAGE_PATH=/app/storage
+      - SESSION_DIR=/app/storage
+      - PROXY_URL=${PROXY_URL:-}
+    volumes:
+      - ./storage:/app/storage
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"

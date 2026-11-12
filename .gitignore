@@ -1,8 +1,9 @@
 __pycache__/
-.env
 *.pyc
 *.pyo
-sessions_*.json
+.env
+*.pem
+storage/
+visitas/
 sesiones.json
 sesiones_sitios.json
-visitas/

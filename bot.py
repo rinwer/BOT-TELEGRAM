@@ -38,7 +38,7 @@ SESSION_DIR = os.environ.get("SESSION_DIR", BASE_DIR)
 SESSION_FILE = os.environ.get("SESSION_FILE", "sesiones_v2.json")
 CHECKLIST_FILE = os.environ.get("CHECKLIST_FILE", "checklist.json")
 
-POR_PAGINA = 20  # botones de carpeta por pantalla
+POR_PAGINA = 24  # botones de carpeta por pantalla (en cuadrícula de 2-3 columnas)
 
 # Símbolos (se pueden cambiar aquí)
 ICONO_OK = "✅"          # carpeta lista
@@ -75,6 +75,52 @@ def _inicio_torre():
 
 
 INICIO_TORRE = _inicio_torre()
+
+
+# --- Aspecto de los botones --------------------------------------------------
+# (prefijo en minúsculas, ícono, nombre corto opcional). Solo cambia lo que se ve
+# en el botón; el nombre real de la carpeta en OneDrive no se modifica.
+BOTONES = [
+    ("posicionamiento", "📍", "Posición"),
+    ("sm", "🗄️", None),
+    ("fcob", "🔌", None),
+    ("fpfh", "🔧", None),
+    ("equipo tx", "📶", "TX"),
+    ("planta electrica", "⚡", "Planta"),
+    ("equipo fuerza", "🔋", "Fuerza"),
+    ("ac", "💡", None),
+    ("transformador y medidor", "🔆", "Medidor"),
+    ("dc", "⚙️", None),
+    ("anillo tierras y escalerillas", "🌱", "Tierras"),
+    ("general piso", "🏢", "General"),
+    ("plano mano alzada piso", "📝", "Plano"),
+    ("riesgos", "⚠️", "Riesgos"),
+    ("360", "🔄", None),
+    ("rr antena", "📡", None),
+    ("rf", "📻", None),
+    ("mw", "🛰️", None),
+    ("bussbar en rack vertical", "🔩", "Busbar rack"),
+    ("pararrayos", "🌩️", "Pararrayos"),
+    ("luz de obstruccion", "🚨", "Luz obstr."),
+    ("panoramicas 5g", "🖼️", "Pano 5G"),
+    ("linea de vida", "🧗", "Línea vida"),
+    ("soportes en torre", "🏗️", "Soportes"),
+    ("autosoportados en terraza", "🏗️", "Autosop."),
+    ("medidas de canastilla", "📏", "Canastilla"),
+    ("estructuras especiales", "🏛️", "Especiales"),
+]
+
+
+def aspecto_boton(nombre):
+    """(ícono, nombre corto) de un botón de menú."""
+    bajo = nombre.lower().strip()
+    m = re.match(r"rr antena (\d+)$", bajo)
+    if m:
+        return "📡", f"RR {m.group(1)}"
+    for prefijo, icono, corto in BOTONES:
+        if re.match(re.escape(prefijo) + r"($|[\s\-\(\.,])", bajo):
+            return icono, (corto or nombre)
+    return "", nombre
 
 
 def visible_en_vista(i, nodo, vista):
@@ -239,27 +285,28 @@ def avance_nodo(sitio, nodo, ruta):
 
 
 def etiqueta_boton(sitio, hijo, ruta_hijo):
-    nombre = hijo["nombre"]
+    icono, corto = aspecto_boton(hijo["nombre"])
+    normal = f"{icono} {corto}".strip()
     hechos, total = avance_nodo(sitio, hijo, ruta_hijo)
     if total == 0:
-        return nombre
+        return normal
 
     if hojas_de(hijo) and not menus_de(hijo):  # carpeta con lista de fotos
         prog = leer_prog(sitio, ruta_hijo)
         if prog["estado"] == "ok":
-            return f"{ICONO_OK} {nombre}"
+            return f"{ICONO_OK} {corto}"
         if prog["estado"] == "na":
-            return f"{ICONO_NA} {nombre}"
+            return f"{ICONO_NA} {corto}"
         if prog["fotos"]:
-            return f"{ICONO_PROCESO} {nombre}"
-        return nombre
+            return f"{ICONO_PROCESO} {corto}"
+        return normal
 
     # Grupo de carpetas (ej. RR ANTENA)
     if hechos >= total:
-        return f"{ICONO_OK} {nombre}"
+        return f"{ICONO_OK} {corto}"
     if hechos:
-        return f"{ICONO_PROCESO} {nombre} ({hechos}/{total})"
-    return nombre
+        return f"{ICONO_PROCESO} {corto} ({hechos}/{total})"
+    return normal
 
 
 # --- Callback data -----------------------------------------------------------
@@ -304,11 +351,15 @@ def teclado_nodo(sitio, indices, pagina=0, vista=None):
     menus = menus_de(nodo, vista)
     inicio = pagina * POR_PAGINA
     fin = inicio + POR_PAGINA
+    botones = []
     for i, hijo in menus[inicio:fin]:
         r = ruta + ([] if hijo.get("virtual") else [hijo["nombre"]])
-        keyboard.append([
+        botones.append(
             InlineKeyboardButton(etiqueta_boton(sitio, hijo, r), callback_data=cb(indices + [i]))
-        ])
+        )
+    columnas = 3  # cuadrícula de 3 columnas
+    for k in range(0, len(botones), columnas):
+        keyboard.append(botones[k:k + columnas])
 
     nav = []
     if pagina > 0:

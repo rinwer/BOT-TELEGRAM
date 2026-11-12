@@ -409,7 +409,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         texto += (
             "✅ <i>Sitio asignado automáticamente desde este grupo.</i>\n\n"
             "Comandos disponibles:\n"
-            "• <code>/menu</code> - Muestra el checklist de inspección.\n"
+            "• <code>/menu</code> - Muestra el checklist (elige Piso / Torre / Todo).\n"
+            "• <code>/piso</code> · <code>/torre</code> · <code>/todo</code> - Abre directo esa vista.\n"
             "• <code>/sitio [NOMBRE]</code> - Consultar o cambiar el sitio si se requiere."
         )
     else:
@@ -457,7 +458,7 @@ async def set_sitio(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, vista=None):
     chat = update.effective_chat
     user = update.effective_user
     chat_id = str(chat.id) if chat else ""
@@ -474,14 +475,29 @@ async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     usuario(uk)["sitio"] = sitio
     usuario(uk).pop("categoria_activa", None)
-    usuario(uk).pop("vista", None)  # cada /menu pregunta de nuevo Piso / Torre / Todo
+    if vista:
+        usuario(uk)["vista"] = vista
+    else:
+        usuario(uk).pop("vista", None)  # /menu pregunta de nuevo Piso / Torre / Todo
     msg = await update.message.reply_text(
-        texto_nodo(sitio, [], nombre=user.first_name if user else ""),
-        reply_markup=teclado_nodo(sitio, []),
+        texto_nodo(sitio, [], nombre=user.first_name if user else "", vista=vista),
+        reply_markup=teclado_nodo(sitio, [], vista=vista),
         parse_mode="HTML",
     )
     registrar_dueno(chat_id, msg.message_id, uk)  # este menú es de quien lo pidió
     guardar_sesiones()
+
+
+async def menu_piso(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await mostrar_menu(update, context, vista="piso")
+
+
+async def menu_torre(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await mostrar_menu(update, context, vista="torre")
+
+
+async def menu_todo(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await mostrar_menu(update, context, vista="todo")
 
 
 # --- Botones -----------------------------------------------------------------
@@ -760,6 +776,9 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("sitio", set_sitio))
     app.add_handler(CommandHandler("menu", mostrar_menu))
+    app.add_handler(CommandHandler("piso", menu_piso))
+    app.add_handler(CommandHandler("torre", menu_torre))
+    app.add_handler(CommandHandler("todo", menu_todo))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.PHOTO | filters.Document.IMAGE, handle_photo))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))

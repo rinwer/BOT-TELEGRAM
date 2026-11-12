@@ -59,6 +59,31 @@ with open(os.path.join(BASE_DIR, CHECKLIST_FILE), "r", encoding="utf-8") as f:
 
 RAIZ = {"nombre": "", "hijos": ARBOL}
 
+# --- Vistas del menú principal: Piso / Torre / Todo ---------------------------
+# Las carpetas ANTES de TORRE_DESDE son de Piso; desde esa carpeta en adelante,
+# de Torre. Las de COMUN aparecen en ambas vistas.
+TORRE_DESDE = "360"
+COMUN = ("RIESGOS",)
+VISTAS = {"piso": "🏢 Piso", "torre": "🗼 Torre", "todo": "📋 Ver todo"}
+
+
+def _inicio_torre():
+    for i, n in enumerate(ARBOL):
+        if n["nombre"] == TORRE_DESDE:
+            return i
+    return len(ARBOL)
+
+
+INICIO_TORRE = _inicio_torre()
+
+
+def visible_en_vista(i, nodo, vista):
+    if vista not in ("piso", "torre"):
+        return True
+    if any(nodo["nombre"].startswith(c) for c in COMUN):
+        return True
+    return (i < INICIO_TORRE) if vista == "piso" else (i >= INICIO_TORRE)
+
 # Estructura de sesiones (cada técnico trabaja con su propio estado):
 #   "usuarios": {"<chat>:<usuario>": {"sitio": ..., "categoria_activa": {...}}}
 #   "progreso": {"<sitio>": {"<ruta carpeta>": {"estado": None|"ok"|"na", "fotos": n}}}
@@ -159,9 +184,13 @@ def hojas_de(nodo):
     return [h for h in nodo.get("hijos", []) if "hijos" not in h]
 
 
-def menus_de(nodo):
-    """Submenús (botones) de un menú, con su índice real."""
-    return [(i, h) for i, h in enumerate(nodo.get("hijos", [])) if "hijos" in h]
+def menus_de(nodo, vista=None):
+    """Submenús (botones) de un menú, con su índice real.
+    En la raíz, `vista` ("piso"/"torre") filtra las carpetas mostradas."""
+    menus = [(i, h) for i, h in enumerate(nodo.get("hijos", [])) if "hijos" in h]
+    if nodo is RAIZ and vista:
+        menus = [(i, h) for i, h in menus if visible_en_vista(i, h, vista)]
+    return menus
 
 
 def nodo_por_indices(indices):
@@ -250,9 +279,17 @@ def parse_indices(cuerpo):
 
 
 # --- Pantallas ---------------------------------------------------------------
-def teclado_nodo(sitio, indices, pagina=0):
+def teclado_nodo(sitio, indices, pagina=0, vista=None):
     nodo, nombres, ruta = nodo_por_indices(indices)
     keyboard = []
+
+    # Pantalla inicial: elegir qué se va a enviar
+    if not indices and not vista:
+        return InlineKeyboardMarkup([
+            [InlineKeyboardButton(VISTAS["piso"], callback_data="v:piso"),
+             InlineKeyboardButton(VISTAS["torre"], callback_data="v:torre")],
+            [InlineKeyboardButton(VISTAS["todo"], callback_data="v:todo")],
+        ])
 
     if hojas_de(nodo):
         estado = leer_prog(sitio, ruta)["estado"]
@@ -264,7 +301,7 @@ def teclado_nodo(sitio, indices, pagina=0):
                 InlineKeyboardButton(f"{ICONO_NA} No aplica", callback_data=cb_accion("x", indices)),
             ])
 
-    menus = menus_de(nodo)
+    menus = menus_de(nodo, vista)
     inicio = pagina * POR_PAGINA
     fin = inicio + POR_PAGINA
     for i, hijo in menus[inicio:fin]:
@@ -284,16 +321,22 @@ def teclado_nodo(sitio, indices, pagina=0):
     if indices:
         etiqueta = "⬅️ Volver" if len(indices) > 1 else "⬅️ Volver al Menú"
         keyboard.append([InlineKeyboardButton(etiqueta, callback_data=cb(indices[:-1]))])
+    elif vista:
+        keyboard.append([InlineKeyboardButton("🔄 Cambiar (Piso / Torre / Todo)", callback_data="v:")])
     return InlineKeyboardMarkup(keyboard)
 
 
-def texto_nodo(sitio, indices, pagina=0, nombre=""):
+def texto_nodo(sitio, indices, pagina=0, nombre="", vista=None):
     nodo, nombres, ruta = nodo_por_indices(indices)
     if not indices:
         quien = f"👤 <b>{esc(nombre)}</b>\n" if nombre else ""
+        if not vista:
+            pregunta = "¿Qué va a enviar?"
+        else:
+            pregunta = f"Vista: <b>{VISTAS[vista]}</b>\nSeleccione una categoría:"
         return (
             f"📂 <b>Menú de Inspección</b>\n{quien}"
-            f"📍 <b>Sitio:</b> <code>{esc(sitio)}</code>\nSeleccione una categoría:"
+            f"📍 <b>Sitio:</b> <code>{esc(sitio)}</code>\n{pregunta}"
         )
 
     texto = f"📁 <b>{esc(' > '.join(nombres))}</b>"
@@ -322,7 +365,7 @@ def texto_nodo(sitio, indices, pagina=0, nombre=""):
         if prog["estado"] is None:
             texto += f"\n\nCuando termine pulse <b>{ICONO_OK} Listo</b>. Si no corresponde, <b>{ICONO_NA} No aplica</b>."
 
-    menus = menus_de(nodo)
+    menus = menus_de(nodo, vista)
     if menus:
         texto += "\n\nSeleccione una opción:"
         if len(menus) > POR_PAGINA:
@@ -431,6 +474,7 @@ async def mostrar_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     usuario(uk)["sitio"] = sitio
     usuario(uk).pop("categoria_activa", None)
+    usuario(uk).pop("vista", None)  # cada /menu pregunta de nuevo Piso / Torre / Todo
     msg = await update.message.reply_text(
         texto_nodo(sitio, [], nombre=user.first_name if user else ""),
         reply_markup=teclado_nodo(sitio, []),
@@ -469,7 +513,15 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         data = query.data
         pagina = 0
 
-        if data.startswith("a:"):
+        if data.startswith("v:"):
+            # Elegir vista del menú principal: v:piso | v:torre | v:todo | v: (cambiar)
+            v = data[2:]
+            if v in VISTAS:
+                usuario(uk)["vista"] = v
+            else:
+                usuario(uk).pop("vista", None)
+            indices = []
+        elif data.startswith("a:"):
             # Listo / No aplica / Reabrir (check general de la carpeta)
             _, accion, cuerpo = data.split(":", 2)
             indices = parse_indices(cuerpo)
@@ -509,9 +561,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             usuario(uk).pop("categoria_activa", None)
         guardar_sesiones()
 
+        vista = usuario(uk).get("vista")
         await query.edit_message_text(
-            texto_nodo(sitio, indices, pagina, nombre=query.from_user.first_name or ""),
-            reply_markup=teclado_nodo(sitio, indices, pagina),
+            texto_nodo(sitio, indices, pagina, nombre=query.from_user.first_name or "", vista=vista),
+            reply_markup=teclado_nodo(sitio, indices, pagina, vista),
             parse_mode="HTML",
         )
 

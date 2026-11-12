@@ -28,8 +28,8 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-          # Crear directorio en VPS si no existe
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "mkdir -p ~/tss-bot/storage ~/tss-bot/filebrowser_data"
+          # Crear directorio en VPS si no existe y asegurar permisos
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "mkdir -p ~/tss-bot/storage ~/tss-bot/filebrowser_data && chmod -R 777 ~/tss-bot/filebrowser_data"
 
           # Sincronizar archivos del proyecto hacia la VPS
           rsync -avz \

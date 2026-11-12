@@ -27,7 +27,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)  # evita imprimir el token
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TOKEN = os.environ["TELEGRAM_TOKEN"]
-PROXY_URL = os.environ.get("PROXY_URL")  # opcional
+PROXY_URL = os.environ.get("PROXY_URL") or None  # opcional
 
 ONEDRIVE_BASE_PATH = os.environ.get(
     "STORAGE_PATH",

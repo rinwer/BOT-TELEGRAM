@@ -4,6 +4,7 @@ __pycache__/
 .env
 *.pem
 storage/
+filebrowser_data/
 visitas/
 sesiones.json
 sesiones_sitios.json

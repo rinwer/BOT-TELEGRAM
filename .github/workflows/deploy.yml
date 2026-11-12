@@ -29,13 +29,14 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
 
           # Crear directorio en VPS si no existe
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "mkdir -p ~/tss-bot/storage"
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no "$VPS_USER@$VPS_HOST" "mkdir -p ~/tss-bot/storage ~/tss-bot/filebrowser_data"
 
           # Sincronizar archivos del proyecto hacia la VPS
           rsync -avz \
             --exclude '.git' \
             --exclude '.env' \
             --exclude 'storage' \
+            --exclude 'filebrowser_data' \
             --exclude '__pycache__' \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             ./ "$VPS_USER@$VPS_HOST:~/tss-bot/"

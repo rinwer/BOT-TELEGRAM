@@ -39,6 +39,19 @@ cp .env.example .env
 | `STORAGE_PATH` | Ruta para fotos y registros generados en inspecciones | `/app/storage` |
 | `SESSION_DIR` | Ruta donde se almacena el archivo de persistencia `sesiones_v2.json` | `/app/storage` |
 | `PROXY_URL` | URL de proxy HTTP/SOCKS5 (si aplica) | *(Opcional)* |
+| `FILEBROWSER_PORT` | Puerto web para la interfaz de visualización y descarga de fotos | `8080` |
+
+---
+
+## 📂 Visualización y Descarga Online (FileBrowser)
+
+El proyecto incluye el servicio **FileBrowser** para acceder a todas las fotos y carpetas de sitios vía web:
+- **URL:** `http://IP_DE_TU_VPS:8080` (o a través de tu dominio si configuras proxy inverso).
+- **Usuario inicial:** `admin`
+- **Contraseña inicial:** `admin` *(recomendado cambiarla al primer ingreso en Configuración > Perfil)*.
+- **Funcionalidades:**
+  - Ver fotos y miniaturas en alta resolución en tiempo real.
+  - Descargar carpetas enteras de sitios en formato `.ZIP` con un solo clic.
 
 ---
 

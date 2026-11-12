@@ -24,6 +24,8 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)  # evita imprimir el token
 
 # --- Configuración -----------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 TOKEN = os.environ["TELEGRAM_TOKEN"]
 PROXY_URL = os.environ.get("PROXY_URL")  # opcional
 
@@ -51,7 +53,6 @@ ICONO_PROCESO = "🔸"     # tiene fotos pero aún no se marcó como lista
 #   - Los ítems (columna Descripción) son una LISTA de recordatorio, sin estado.
 #   - El check ✅ (o 🚫 No aplica) es GENERAL por carpeta, ej. "RR ANTENA 1".
 #   - "virtual" = solo agrupa botones; no crea carpeta en OneDrive.
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(BASE_DIR, CHECKLIST_FILE), "r", encoding="utf-8") as f:
     ARBOL = json.load(f)
 

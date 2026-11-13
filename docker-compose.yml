@@ -34,6 +34,8 @@ services:
     environment:
       - FB_DATABASE=/database/filebrowser.db
       - FB_ROOT=/srv
+      - FILEBROWSER_USERNAME=admin
+      - FILEBROWSER_PASSWORD=MiNuevaClave2024!
     logging:
       driver: "json-file"
       options:

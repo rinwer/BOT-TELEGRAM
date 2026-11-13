@@ -32,10 +32,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TOKEN = os.environ["TELEGRAM_TOKEN"]
 PROXY_URL = os.environ.get("PROXY_URL") or None  # opcional
 
-ONEDRIVE_BASE_PATH = os.environ.get(
-    "STORAGE_PATH",
-    os.environ.get("ONEDRIVE_BASE_PATH", r"C:\Users\usuario microsoft\OneDrive\TSS\MOD_5G TEMWOK\INFO BOT TSS")
-)
+ONEDRIVE_BASE_PATH = os.environ.get("STORAGE_PATH", "./storage")
+
 SESSION_DIR = os.environ.get("SESSION_DIR", BASE_DIR)
 SESSION_FILE = os.environ.get("SESSION_FILE", "sesiones_v2.json")
 CHECKLIST_FILE = os.environ.get("CHECKLIST_FILE", "checklist.json")
